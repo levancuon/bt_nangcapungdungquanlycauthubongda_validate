@@ -84,8 +84,8 @@
 
             </div>
             <div class="mb-3">
-                <label for="experience" class="form-label">Kinh nghiệm</label>
-                <input type="text" class="form-control" id="experience" th:field="*{experience}">
+                <label for="experience" class="form-label">Kinh nghiệm (năm)</label>
+                <input type="number" class="form-control" id="experience" th:field="*{experience}" placeholder="bao nhiêu năm kinh nghiệm ??">
                 <div th:if="${#fields.hasErrors('experience')}" th:errors="*{experience}" ></div>
 
             </div>
