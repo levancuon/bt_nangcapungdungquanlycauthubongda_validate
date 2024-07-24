@@ -23,8 +23,10 @@ public class Player {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NotBlank(message = "Tên không được để trống")
-    @Pattern(regexp = "[a-zA-Z0-9]*", message = "Ko được chứa ký tự đặc biệt")
+    @Pattern(regexp = "^[aAàÀảẢãÃáÁạẠăĂằẰẳẲẵẴắẮặẶâÂầẦẩẨẫẪấẤậẬbBcCdDđĐeEèÈẻẺẽẼéÉẹẸêÊềỀểỂễỄếẾệỆfFgGhHiIìÌỉỈĩĨíÍịỊjJkKlLmMnNoOòÒỏỎõÕóÓọỌôÔồỒổỔỗỖốỐộỘơƠờỜởỞỡỠớỚợỢpPqQrRsStTuUùÙủỦũŨúÚụỤưƯừỪửỬữỮứỨựỰvVwWxXyYỳỲỷỶỹỸýÝỵỴzZ0-9 ]+$", message = "Ko được chứa ký tự đặc biệt")
+
     @Size(min = 5, max = 100, message = "Độ dài từ 5-100 ký tự")
     private String name;
     @ValidAge(message = "tuổi phải lớn hơn 16 và bé hơn 100")

@@ -18,7 +18,7 @@ public class AgeValidator implements ConstraintValidator<ValidAge, Date> {
     @Override
     public boolean isValid(Date dateOfBirth, ConstraintValidatorContext context) {
         if (dateOfBirth == null) {
-            return false; // hoặc trả về true nếu bạn cho phép giá trị null
+            return false;
         }
         LocalDate dob = new java.sql.Date(dateOfBirth.getTime()).toLocalDate();
         LocalDate currentDate = LocalDate.now();
